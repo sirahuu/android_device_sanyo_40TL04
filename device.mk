@@ -16,10 +16,10 @@
 
 # .rc
 PRODUCT_COPY_FILES := \
-        device/sanyo/40TL04/ueventd.rc:root/ueventd.rc \
-	device/sanyo/40TL04/init.freescale.rc:root/init.freescale.rc \
-	device/sanyo/40TL04/ueventd.freescale.rc:root/ueventd.freescale.rc \
-	device/sanyo/40TL04/init.tsmode.rc:root/init.tsmode.rc
+	device/sanyo/40TL04/init.freescalemx53bej2board.rc:root/init.freescalemx53bej2board.rc \
+	device/sanyo/40TL04/ueventd.freescalemx53bej2board.rc:root/ueventd.freescalemx53bej2board.rc \
+	device/sanyo/40TL04/init.tsmode.rc:root/init.tsmode.rc \
+        device/sanyo/40TL04/fstab.freescalemx53bej2board:root/fstab.freescalemx53bej2board
 
 #cmd
 PRODUCT_COPY_FILES += \
@@ -31,7 +31,6 @@ PRODUCT_COPY_FILES += \
         device/sanyo/40TL04/other/mlan.ko:system/wifi/mlan.ko \
         device/sanyo/40TL04/other/sd8787.ko:system/wifi/sd8787.ko\
         device/sanyo/40TL04/other/sd8787_uapsta.bin:system/wifi/sd8787_uapsta.bin \
-        device/sanyo/40TL04/other/vold.fstab:system/etc/vold.fstab \
 device/sanyo/40TL04/other/hostapd.conf:system/etc/wifi/hostapd.conf \
 device/sanyo/40TL04/other/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
@@ -49,11 +48,13 @@ PRODUCT_PACKAGES := \
         libasound\
         make_ext4fs \
 	com.android.future.usb.accessory \
-	librs_jni
+	librs_jni \
+        libGLES_android
 
 PRODUCT_PROPERTY_OVERRIDES := \
 	hwui.render_dirty_regions=false \
         ro.config.low_ram=true \
+        ro.sf.lcd_density=160 \
 	wifi.interface=wlan0 \
 	wifi.supplicant_scan_interval=15
 
