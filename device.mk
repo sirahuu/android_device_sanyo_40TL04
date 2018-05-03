@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-DEVICE_PACKAGE_OVERLAYS := device/sanyo/40TL04/overlay
-
 # .rc
 PRODUCT_COPY_FILES := \
         device/sanyo/40TL04/ueventd.rc:root/ueventd.rc \
