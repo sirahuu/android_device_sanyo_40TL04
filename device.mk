@@ -45,6 +45,7 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml
 
 PRODUCT_PACKAGES := \
+        init.40TL04 \
         libasound\
         make_ext4fs \
 	com.android.future.usb.accessory \
