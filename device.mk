@@ -16,9 +16,10 @@
 
 # .rc
 PRODUCT_COPY_FILES := \
+        device/sanyo/40TL04/init.rc:root/init.rc \
         device/sanyo/40TL04/ueventd.rc:root/ueventd.rc \
-	device/sanyo/40TL04/init.freescale.rc:root/init.freescale.rc \
-	device/sanyo/40TL04/ueventd.freescale.rc:root/ueventd.freescale.rc \
+	device/sanyo/40TL04/init.freescalemx53bej2board.rc:root/init.freescalemx53bej2board.rc \
+	device/sanyo/40TL04/ueventd.freescalemx53bej2board.rc:root/ueventd.freescalemx53bej2board.rc \
 	device/sanyo/40TL04/init.tsmode.rc:root/init.tsmode.rc
 
 #cmd
@@ -46,6 +47,7 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml
 
 PRODUCT_PACKAGES := \
+        init.40TL04 \
         libasound\
         make_ext4fs \
 	com.android.future.usb.accessory \
