@@ -20,7 +20,7 @@ LOCAL_SRC_FILES:= 	       \
 
 LOCAL_SHARED_LIBRARIES += libcutils libutils liblog libGLES_trace
 LOCAL_LDLIBS := -lpthread -ldl
-LOCAL_MODULE:= libEGL.40TL04
+LOCAL_MODULE:= libEGL
 LOCAL_MODULE_TAGS := optional
 LOCAL_LDFLAGS += -Wl,--exclude-libs=ALL
 LOCAL_SHARED_LIBRARIES += libdl
